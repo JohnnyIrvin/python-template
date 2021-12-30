@@ -15,7 +15,7 @@ python run.py
 
 If you prefer to use docker, you can use the docker image.
 ```bash
-docker run -t myproject --target RUN .
+docker build -t myproject --target RUN .
 docker run myproject
 ```
 
@@ -24,7 +24,7 @@ To test the library, you can use the `run_tests.py` script. It is highly recomme
 
 Using docker, you can run the following commands to run the tests.
 ```bash
-docker run -t tests --target TEST .
+docker build -t tests --target TEST .
 docker run tests
 ```
 
