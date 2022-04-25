@@ -1,7 +1,5 @@
 # Project Name
 
-# Introduction
-
 This template is for creating a new project. Please replace this section with your project's introduction.
 
 # Usage
