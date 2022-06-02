@@ -18,7 +18,7 @@
 # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-FROM python:3.9 as RUN
+FROM python:3.10 as RUN
 WORKDIR /code
 
 COPY run.py requirements.txt /code/
@@ -28,7 +28,7 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 ENTRYPOINT ["./run.py"]
 
-FROM python:3.9 as TEST
+FROM python:3.10 as TEST
 WORKDIR /code
 
 COPY run.py run_tests.py requirements.txt /code/
