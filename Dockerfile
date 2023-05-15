@@ -26,15 +26,15 @@ COPY src/ /code/src/
 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-ENTRYPOINT ["./run.py"]
+ENTRYPOINT ["python", "-m", "my_project"]
 
 FROM python:3.10 as TEST
 WORKDIR /code
 
-COPY run.py run_tests.py requirements.txt /code/
+COPY requirements.txt /code/
 COPY src/ /code/src/
 COPY tests/ /code/tests/
 
 RUN pip install pytest coverage ; pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-ENTRYPOINT ["./run_tests.py"]
+ENTRYPOINT ["python", "-m", "pytest"]
