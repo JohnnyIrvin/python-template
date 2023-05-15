@@ -21,7 +21,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 from sys import argv
 
-from src import main
+from project_name import main
 
 if __name__ == '__main__':
     main(len(argv), argv)
